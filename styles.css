@@ -1,0 +1,530 @@
+@font-face{
+    font-family:"chiller";
+    src:url("static/chiller.ttf")
+}
+
+/*body{background:#3d88cc}*/
+body{background-image:linear-gradient(to left, rgba(128,211,255,1), rgba(61,136,204,1))}
+
+.vids-vign{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.vids-vign div{
+    margin:auto;
+   
+}
+.vids-vign div a img{
+    
+    text-align: center;
+    width:100%;
+    padding:3px;
+}
+.vids-vign div a p{
+    color:#ffc368;
+    font-family: monospace;
+    background-color: rgba(0,0,0,0.3);
+    padding:2px 2px 2px 10px;
+    border:1px solid #ffc368;
+   
+}
+.vids-vign div a p:hover{
+    color:#fff;
+   
+}
+.other-video{
+
+    display: flex;
+    flex-direction: row;
+    
+   
+
+}
+.other-video iframe{
+    width:460px;
+    height: 300px;
+    margin:5px;
+    border: 1px solid #000;
+}
+h1, h2{
+    font-family: "chiller";
+   
+    color:#ffc368;
+}
+h2.sub-logo, h2.sbub-logo{
+    font-size: 30px;
+    font-weight: 200;
+    /*font-style: italic;*/
+   
+}
+h2.sbub-logo{
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
+    padding:10px;
+}
+h2.sub-logo b, h2.sbub-logo b{
+    font-size: 30px;
+    font-weight: 200;
+    font-style: normal;
+    font-family: monospace;
+}
+
+
+.logo{
+    display:none;
+}
+.top-logo{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    
+}
+.sub-logo{
+    text-align: center;
+    margin-left:-128px;
+    padding:5px;
+   
+}
+.sbub-logo{
+    text-align: center;
+   
+    padding:5px;
+   
+}
+.site-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 5%;
+   
+    /*border:1px solid red;*/
+}
+
+.left-content{
+    display: flex;
+    justify-content: center;
+    /*border: 1px solid blue;*/
+    position: relative;
+}
+.right-content{
+    /*border:1px solid white;*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.left-content img{
+
+   width:90%;
+   margin: auto;
+   border:2px solid #ffc368;
+
+}
+.right-content img{
+
+  width: 90%; 
+  margin: auto;
+
+}
+.btn-content{
+    position: absolute;
+    background-color: rgba(0,0,0,0.5);
+    left:50%;
+    top:50%;
+    padding:12px;
+    color:#ffc368;
+    border: 2px solid #ffc368;
+    font-size: 25px;
+    font-family: "Courier New";
+    font-weight: 500;
+    width:200px;
+    text-align: center;
+    cursor: pointer;
+   
+}
+
+.btn-content-listen{
+    margin-top:-25px;
+    margin-left: -114px;
+}
+
+.btn-content-listen:hover{
+    background-color: rgba(255,255,255,0.4);
+}
+
+.btn-content-watch{
+    margin-top:-30px;
+    margin-left: -100px;
+}
+.btn-content-watch:hover{
+    background-color: rgba(0,0,0,0.9);
+}
+
+.site-footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-top:2px solid #ffc368;
+    border-bottom:2px solid #ffc368;
+
+}
+.logo-desk{
+    width:50%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 96px;
+    
+   
+}
+.logo-desk h1, .logo{
+    font-size: 60px;
+    font-weight: 500;
+    margin:0;
+}
+.social-media{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    padding-right: 32px;
+   
+   
+}
+
+
+.fa-youtube, .fa-instagram, .fa-facebook, .fa-spotify, .fa-apple{
+    color:#ffc368;
+    font-size:30px;
+    padding:5px;
+   
+}
+.deezer-logo{
+    color:#ffc368;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:13px;
+    padding:5px;
+}
+.sub-logo a, .sbub-logo a{
+    color:#ffc368;
+    font-weight: bold;
+}
+.sub-logo a:hover, .sbub-logo a:hover{
+    color:#f89706;
+}
+.fa-youtube:hover, .fa-instagram:hover, .fa-facebook:hover, .fa-spotify:hover, .fa-apple:hover,.deezer-logo:hover, .sub-logo a:hover {
+    color:#ffffff;
+   
+}
+
+.criss-cross{
+  
+    color:#000000;
+}
+
+/** video player*/
+.full-video-container{
+    display: none;
+    position: absolute;
+    top:0;
+}
+* {
+    box-sizing: border-box;
+  }
+  
+  .column img {
+    vertical-align: middle;
+  }
+  iframe{
+      margin:auto;
+  }
+  /* Position the image container (needed to position the left and right arrows) */
+  .video-container {
+    position: relative;
+    background-color:rgba(255, 192, 104, 0.4);
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Add a pointer when hovering over the thumbnail images */
+  .cursor {
+    cursor: pointer;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  .prev{
+      left:10%;
+  }
+  
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 10%;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color:rgba(255, 192, 104, 0.6);;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Container for image text */
+  .caption-container {
+    text-align: center;
+    background-color:rgba(255, 192, 104, 0.95);
+    padding: 2px 16px;
+    color: #000;
+    width: 44%;
+    margin: auto;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  iframe{
+      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width:560px;
+       height:315px;
+       border: 2px solid rgb(255, 192, 104);
+  }
+  .row{
+      width:80%;
+      margin:auto;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Six columns side by side */
+  .column {
+    float: left;
+    width: 14.28%;
+  }
+  
+  /* Add a transparency effect for thumnbail images */
+  .demo {
+    opacity: 0.2;
+    border:1px solid rgba(255, 192, 104, 0.4)
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+    border: 1px solid #ffc368;
+  }
+  .video-div-title{
+      color:#000;
+      text-align: center;
+      font-size: 13px;;
+  }
+  .tdc{
+      width:60px;
+     
+     
+      z-index: 9;
+    
+     
+  }
+  /*Concert*/
+
+  .concert{
+    font-family: monospace;
+    text-align: center;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0.3);
+
+    margin:10px auto;
+    padding:5px;
+    
+  }
+  .date-concert{
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      background-color: #3d88cc;
+      margin-bottom:16px;
+      font-family: monospace;
+      
+      
+  }
+  .date-concert p {
+      padding:8px;
+      color:#fff;
+      font-size:18px;
+      width:90%;
+  }
+  .date-concert p a {
+      color:rgb(255, 192, 104);
+      text-decoration: none;
+  }
+  .date-concert p a:hover {
+    color:#fff;
+    text-decoration: none;
+}
+@media screen and (max-width:980px){
+    .audio-player{
+        margin-top:-200px;
+    }
+    .other-video{
+
+  
+    
+        overflow-x: scroll;
+    
+    }
+}
+@media screen and (max-width:767px){
+ .main-video{
+     margin-top:0!important;
+ }
+    .vids-vign{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .vids-vign div{
+        margin: auto;
+    }
+    .main-video{
+        margin-top:5%;
+    }
+
+    .site-content{
+      
+        flex-direction: column;
+    
+    }
+    .left-content{
+        margin-bottom:32px;
+    }
+    .right-content img{
+        width: 100%;
+    }
+    .logo-desk{
+       
+        padding-right: 0;
+    }
+    .logo-desk h1{
+       font-size: 30px;
+    }
+    .social-media{
+        width: 100%;
+        padding-right: 0;
+    }
+    .logo{
+        display:flex;
+        
+    }
+    .sub-logo{
+        display: none;
+    }
+    .sbub-logo{
+        
+        text-align:center;
+        margin-left:0;
+      
+
+    }
+    .audio-player{
+        margin-top:-360px;
+        margin-left: -25px;
+    }
+    .full-video-container{
+        top:7%;
+    }
+    .tdc{
+        width:50px;
+       
+    }
+    .site-footer{
+        border:none;
+    }
+    
+}
+@media screen and (max-width:563px){
+    
+    iframe{
+        width:100%;
+        height:300px;
+    }
+    .site-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+       
+    
+    }
+ 
+}
+
+
+@media screen and (max-width:525px){
+    .video-div-title{
+        font-size:10px;
+    }
+}
+@media screen and (max-width:500px){
+    .date-concert p{
+        font-size:13px;
+    }
+    .video-div-title{
+        display:none;
+    }
+}
+@media screen and (max-width:390px){
+    .audio-player{
+        margin-left: -162px;
+        margin-top: -200px;
+    }
+}
+
+
+/**safari only**/
+
+
+_::-webkit-full-page-media, _:future, :root .left-content {
+
+    display:block;
+  
+  }
+  _::-webkit-full-page-media, _:future, :root .left-content img{
+  
+    width:100%;
+    margin-top:4%;
+  
+  }
+  _::-webkit-full-page-media, _:future, :root .right-content {
+  
+    display:block;
+  
+  }

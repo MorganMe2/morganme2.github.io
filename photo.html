@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Morgan-X" content="Morgan-X website">
+    <meta name="keywords" content="Morgan X, morgan x, Morgan-X, morgan-x, M-X,m-x, mx, MX,themorganx, singer, songwriter" />
+    <meta name="robots" content="index, follow" />
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/favicon-16x16.png">
+    <link rel="shortcut icon" href="static/favicon.ico" />
+
+    <link rel="manifest" href="static/site.webmanifest">
+
+
+    <link rel="stylesheet" href="static/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel=stylesheet href="styles.css" type="text/css" >
+ 
+    <title>Morgan-X </title>
+    <style>
+      img{
+       width: 30%;
+        padding:5px;
+      
+      }
+      .phto{
+          display: block;
+          margin:auto;
+         
+      }
+      a{
+          text-decoration: none;
+      }
+      @media screen and (max-width:850px){
+        img{
+        width: 50%;
+        padding:5px;
+        display: block;
+  margin-left: auto;
+  margin-right: auto;
+       
+      
+      }
+      .phto{
+        
+          margin:auto;
+         
+      }
+        
+}
+@media screen and (max-width:700px){
+    img{
+        width: 90%;
+    }
+
+}
+    </style>
+</head>
+<body>
+  <div class="site-footer">
+    <div class="logo-desk">
+        <a href="home.html" target="_blank"><h1 >Morgan-X</h1></a>
+    </div>
+    
+    <div class="social-media">
+        <a href="https://open.spotify.com/album/5phVybKMrtRhfijgqwmyLr" target="_blank"> <i class="fa fa-spotify" aria-hidden="true"></i></a>
+        <a href="https://www.deezer.com/en/album/237485182" target="_blank" class="deezer-logo">deezer</a>
+        <a href="https://music.apple.com/us/album/melancholies-for-the-good-hearted-ep/1572366411" target="_blank"> <i class="fa fa-apple" aria-hidden="true"></i></a>
+         
+         <a href="https://www.youtube.com/channel/UCFE4D5MPbOd8BEltiLPrMzw/" target="_blank"> <i class="fa fa-youtube" aria-hidden="true"></i></a>
+         <a href="https://www.instagram.com/themorgan_x/" target="_blank"> <i class="fa fa-instagram" aria-hidden="true"></i></a>
+         <a href="https://www.facebook.com/themorganx" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i></a>
+         <a href="https://www.tourdechauffe.fr/les-laureats/laureats-2020/laureat-morgan-x" target="_blank"><img class="tdc" src="static/tdc.png"></a>
+      
+        </div>
+</div>
+
+<h1 class="concert">Galerie Photo</h1>
+
+
+
+
+<div  style="max-width:1200px; margin:auto;">
+  <img class="mySlides" src="static/press-4.jpg" style="width:100%">
+  <img class="mySlides" src="static/right-3.jpg" style="width:100%">
+  <img class="mySlides" src="static/press-5.jpg" style="width:100%">
+  <img class="mySlides" src="static/press-7.png" style="width:100%">
+  <img class="mySlides" src="static/14a.jpg" style="width:100%">
+  <img class="mySlides" src="static/press-8.jpg" style="width:100%">
+</div>
+
+
+</div>
+ 
+
+<p style="opacity:0; font-size:4px">Morgan X</p> 
+ 
+
+
+<p style="opacity:0; font-size:4px">Morgan X</p> 
+<script>
+  var myIndex = 0;
+  carousel();
+  
+  function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 2 seconds
+  }
+  </script> 
+</body>
+</html>

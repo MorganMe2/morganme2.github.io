@@ -1,2 +1,1 @@
-# themorganx.com
-Morgan-X website
+# themorganx.github.io
